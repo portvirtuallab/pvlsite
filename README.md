@@ -41,6 +41,14 @@ no framework, no dependencies, no tracking. Open `index.html` and it runs.
 
 ---
 
+## Architecture
+
+The full architecture — the three layers, the page inventory, the content model, the design
+tokens, the technical decisions and the known limitations — is documented in
+[`docs/architecture.md`](docs/architecture.md).
+
+---
+
 ## Design system
 
 | Token | Value | Use |
