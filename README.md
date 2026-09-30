@@ -102,8 +102,8 @@ The site lives at the repository root, so Pages works with no build:
 
 The site is then served at `https://portvirtuallab.github.io/pvlsite/`.
 
-A workflow (`.github/workflows/pages.yml`) is also included for the *GitHub Actions* source, if
-that is preferred. `.nojekyll` is present so files are served exactly as they are.
+`.nojekyll` is present so the files are served exactly as they are. No workflow is needed: the
+site is plain static files, so GitHub publishes them straight from the branch.
 
 ---
 
