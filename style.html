@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system — PVL.ONE</title>
+<meta name="description" content="Colour, typography, cards, buttons and states of the PVL.ONE design system.">
+<link rel="icon" href="assets/pvl-one.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/pvl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<a class="brand" href="index.html"><img src="assets/pvl-one.svg" alt="PVL.ONE — Port Virtual Lab"><span class="brand-tag">by Escola Europea</span></a>
+<nav class="main-nav" aria-label="Main">
+<a href="product.html">Product</a>
+<a href="solutions.html">Solutions</a>
+<a href="audiences.html">Who it is for</a>
+<a href="proof.html">Proof</a>
+<a href="news.html">News</a>
+</nav>
+<div class="header-actions">
+<a class="btn btn-secondary btn-pill btn-sm" href="training-access.html">Enter Training</a>
+<a class="btn btn-primary btn-sm" href="demo.html">Request a demo</a>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>Design system</b></nav>
+<main id="main">
+<section class="section section--tight">
+  <span class="eyebrow">Design system</span>
+  <h1 style="font-size:clamp(34px,4vw,56px); margin:14px 0 16px;">Colour, type, cards, states</h1>
+  <p class="lead" style="max-width:760px;">Built from the approved PVL.ONE palette. Strong colours appear mainly as gradients; the base stays white and navy, with cyan, amber and coral used to create hierarchy.</p>
+</section>
+
+<section class="section section--tight">
+  <h2 style="font-size:26px; margin-bottom:18px;">Palette</h2>
+  <div class="grid grid-5" style="gap:14px;">
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#0B2D63;"></div><div style="padding:14px;"><strong style="font-size:14px;">Institutional navy</strong><br><code>#0B2D63</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#164194;"></div><div style="padding:14px;"><strong style="font-size:14px;">PVL blue</strong><br><code>#164194</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#009FE3;"></div><div style="padding:14px;"><strong style="font-size:14px;">Cyan</strong><br><code>#009FE3</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#F9B233;"></div><div style="padding:14px;"><strong style="font-size:14px;">Logistics amber</strong><br><code>#F9B233</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#E84E1B;"></div><div style="padding:14px;"><strong style="font-size:14px;">Coral</strong><br><code>#E84E1B</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#10233D;"></div><div style="padding:14px;"><strong style="font-size:14px;">Ink</strong><br><code>#10233D</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#65758A;"></div><div style="padding:14px;"><strong style="font-size:14px;">Muted</strong><br><code>#65758A</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#DFE7EF;"></div><div style="padding:14px;"><strong style="font-size:14px;">Line</strong><br><code>#DFE7EF</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:#F5F8FB;"></div><div style="padding:14px;"><strong style="font-size:14px;">Panel</strong><br><code>#F5F8FB</code></div></div>
+    <div class="card" style="padding:0; overflow:hidden;"><div style="height:88px; background:var(--grad-main);"></div><div style="padding:14px;"><strong style="font-size:14px;">Main gradient</strong><br><code>blue &rarr; cyan</code></div></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="grid grid-2" style="gap:20px;">
+    <div class="card">
+      <h2 style="font-size:26px;">Typography</h2>
+      <p class="small">Sora for display and headings &mdash; geometric, technical, a little more distinctive than the usual interface sans. Inter for body and UI, as in the brand guidelines. Both cover Spanish, Catalan, French and Italian accents.</p>
+      <div style="margin-top:10px;">
+        <div style="font-family:Sora; font-size:44px; font-weight:800; letter-spacing:-.045em; color:var(--navy);">Learn by doing</div>
+        <div style="font-family:Sora; font-size:26px; font-weight:700; letter-spacing:-.03em; color:var(--navy); margin-top:10px;">Section heading</div>
+        <div style="font-size:17px; margin-top:10px; color:var(--muted); line-height:1.7;">Body copy in Inter, 16&ndash;19px, generous line height for international readers.</div>
+        <div class="eyebrow" style="margin-top:14px;">LABEL &middot; 800 &middot; TRACKED</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 style="font-size:26px;">Buttons &amp; states</h2>
+      <div class="row" style="margin-top:6px;">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-secondary btn-pill">Pill access</button>
+        <button class="btn btn-sun">Amber</button>
+        <button class="btn" disabled>Disabled</button>
+      </div>
+      <h3 style="margin-top:18px; font-size:16px;">Status badges</h3>
+      <div class="row">
+        <span class="badge badge-ok">Available</span><span class="badge badge-info">Registration required</span><span class="badge badge-warn">Coming soon</span><span class="badge badge-stop">Restricted</span><span class="badge badge-mute">Archived</span><span class="badge badge-warn">Pending verification</span>
+      </div>
+      <p class="small">Colour is never the only signal: every badge carries its own words and the card repeats the consequence in a sentence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <h2 style="font-size:26px; margin-bottom:18px;">Card system</h2>
+  <div class="grid grid-3" style="gap:16px;">
+    <div class="module-card m-commercial"><span class="icon">GR</span><span class="arrow">&#8599;</span><span class="label">Gradient card</span><h3>For areas and modules</h3><p>Radius 20, white text, translucent icon square, decorative circle, lift on hover.</p></div>
+    <div class="card"><span class="icon-badge">WH</span><h3>White info card</h3><p>Radius 20, 1px line border, very soft shadow, 4&ndash;6px lift. For benefits, audiences and courses.</p><span class="card-foot">Link &#8599;</span></div>
+    <div class="route-card route-card--flat" style="padding:20px;"><div class="route-top"><span>Dark operational card</span><span class="live">Live</span></div><div class="route-map" style="padding:20px 0 6px;"><div class="route-line" style="top:34px; bottom:26px;"></div><div class="route-stop is-done"><b>01</b><p>Stage done</p></div><div class="route-stop is-active"><b>02</b><p>Active stage</p></div><div class="route-stop"><b>03</b><p>Next stage</p></div></div></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="grid grid-2" style="gap:20px;">
+    <div class="card"><h3>Shape &amp; depth</h3><p class="small">Radii 12 / 20 / 28. Shadows always blue-tinted, never black. Motion between 0.2s and 0.3s, disabled under <code>prefers-reduced-motion</code>. Maximum content width 1216px.</p>
+      <div class="row" style="margin-top:8px;"><span style="width:60px; height:44px; border-radius:12px; background:var(--panel); border:1px solid var(--line);"></span><span style="width:60px; height:44px; border-radius:20px; background:var(--panel); border:1px solid var(--line);"></span><span style="width:60px; height:44px; border-radius:28px; background:var(--panel); border:1px solid var(--line);"></span></div>
+    </div>
+    <div class="card"><h3>Accessibility rules</h3>
+      <ul class="ticks" style="margin-top:4px;">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Real buttons, links and labels &mdash; never a clickable div</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Visible cyan focus ring, offset from the control</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Text contrast 4.5:1, touch targets 44px and up</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Skip link, landmarks and one H1 per page</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-warn" style="margin-top:20px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.5 17.4A2 2 0 004.2 20.4h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+    <span><strong>Note on the amber.</strong> The original code defined a <code>--lime</code> variable holding the same amber and still used a leftover green in some effects. Here amber is the single active-state colour and the green only survives as a success badge.</span>
+  </div>
+</section>
+<!-- CONVERSION BAND -->
+<section class="section section--tight" aria-labelledby="cta-band">
+  <div class="card card--deep" style="padding:clamp(28px,4vw,46px);" data-reveal>
+    <div class="row" style="gap:32px; align-items:flex-start;">
+      <div style="flex:1 1 360px;">
+        <span class="eyebrow eyebrow--light">Ready when you are</span>
+        <h2 id="cta-band" style="font-size:clamp(26px,2.8vw,38px); margin:12px 0 10px; color:#fff;">Book a demo, or ask for a proposal</h2>
+        <p style="max-width:560px;">A one-hour demo session to see the platform with your own use case &mdash; or a written proposal for Flash, the Immersion Course or Open Lab, priced for your institution and your group size.</p>
+        <p class="small" style="color:rgba(255,255,255,.6); margin-top:12px;">international@escolaeuropea.eu &middot; (+34) 93 298 6070</p>
+      </div>
+      <div class="stack" style="flex:0 0 250px; gap:10px;">
+        <a class="btn btn-primary" href="demo.html" style="width:100%;">Request a demo</a>
+        <a class="btn btn-sun" href="demo.html#proposal" style="width:100%;">Request a proposal</a>
+        <a class="btn btn-ghost" href="audiences.html#chiron" style="width:100%;">Join a free ToT</a>
+        <a href="game.html" class="small" style="color:rgba(255,255,255,.66); text-align:center; display:block; padding-top:6px;">Still thinking? Play a round &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab">
+    <p>The simulation and training environment of Escola Europea &ndash; Intermodal Transport, Port of Barcelona. Learning by doing, across the whole logistics chain.</p>
+  </div>
+  <div>
+    <h4>Product</h4>
+    <a href="product.html">How it works</a>
+    <a href="product.html#ecosystem">Ecosystem</a>
+    <a href="hub-community.html">Virtual Port Community</a>
+    <a href="hub-tools.html">Tools &amp; simulators</a>
+  </div>
+  <div>
+    <h4>Solutions</h4>
+    <a href="solutions.html#openlab">Open Lab</a>
+    <a href="solutions.html#courses">Courses</a>
+    <a href="solutions.html#game">PVL Game</a>
+    <a href="solutions.html#companies">Simulated companies</a>
+  </div>
+  <div>
+    <h4>Who it is for</h4>
+    <a href="audiences.html#vet">Training centres</a>
+    <a href="audiences.html#universities">Universities</a>
+    <a href="audiences.html#companies">Companies</a>
+    <a href="audiences.html#trainers">Trainers</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="proof.html">Proof &amp; results</a>
+    <a href="demo.html">Request a demo</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="port-virtual-world.html">Port Virtual World</a>
+    <a href="certificates.html">Check a certificate</a>
+    <a href="news.html">News</a>
+    <a href="style.html">Design system</a>
+    <a href="game.html">Container stacker</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>Powered by Escola Europea &ndash; Intermodal Transport &middot; ISO 9001:2015 certified &middot; <span data-year>2026</span></span>
+  <span class="spacer"></span>
+  <a href="#">Legal notice</a><a href="#">Privacy &amp; cookies</a><a href="#">Accessibility</a><a href="#">English</a>
+</div>
+<div class="footer-legal">
+  <p>&copy; Escola Europea Short Sea Shipping, Spain.</p>
+  <p><strong>Notice of Copyright Protection:</strong> All rights reserved. Unauthorised use, reproduction, or distribution of this content is prohibited and may result in legal action.</p>
+  <p>The Port Virtual Lab&reg; name and mark, and all other associated trademarks and logotypes, including but not limited to SDG Lines&reg;, SDG Airlines&reg;, MEDtrade&reg; and Playforwarding&reg;, are owned by The Escola Europea de Short Sea Shipping AEIE.</p>
+</div>
+</footer>
+<a class="proto-flag" href="map.html">Prototype &middot; all screens</a>
+<aside class="cookie" data-cookie-banner role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <div style="flex:1 1 440px;">
+    <h2 id="cookie-title">Cookie consent information</h2>
+    <p id="cookie-text" style="margin-top:8px;">This website uses cookies to enhance your browsing experience and to help us understand how visitors interact with our content through Google Analytics. <strong style="color:var(--ink);">By default, no cookies that collect personal data are activated.</strong> We only use analytics cookies after you give your explicit consent. These cookies help us improve the performance and usability of our website, but they do not track you across other sites. By clicking &ldquo;Accept cookies&rdquo; you agree to the use of analytics cookies on this site. You can withdraw your consent at any time by clearing your browser cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Accept cookies</button>
+    <button class="btn btn-secondary btn-sm" type="button" data-cookie-decline>Decline</button>
+    <a class="small" href="https://www.escolaeuropea.eu/privacy-policy/" target="_blank" rel="noopener">Escola Europea&rsquo;s privacy policy &#8599;</a>
+  </div>
+</aside>
+<script src="assets/pvl.js"></script>
+<script src="assets/cookies.js"></script>
+</body>
+</html>

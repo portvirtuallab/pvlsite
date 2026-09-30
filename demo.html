@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a demo — PVL.ONE</title>
+<meta name="description" content="Ask for a PVL.ONE demonstration: tell us what you teach and who your learners are.">
+<link rel="icon" href="assets/pvl-one.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/pvl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<a class="brand" href="index.html"><img src="assets/pvl-one.svg" alt="PVL.ONE — Port Virtual Lab"><span class="brand-tag">by Escola Europea</span></a>
+<nav class="main-nav" aria-label="Main">
+<a href="product.html">Product</a>
+<a href="solutions.html">Solutions</a>
+<a href="audiences.html">Who it is for</a>
+<a href="proof.html">Proof</a>
+<a href="news.html">News</a>
+</nav>
+<div class="header-actions">
+<a class="btn btn-secondary btn-pill btn-sm" href="training-access.html">Enter Training</a>
+<a class="btn btn-primary btn-sm" href="demo.html">Request a demo</a>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>Request a demo</b></nav>
+<main id="main">
+<section class="section">
+  <div class="orb orb-cyan" style="top:-200px; right:-180px;"></div>
+  <div class="grid grid-2" style="gap:44px; align-items:start;">
+    <div data-reveal>
+      <span class="eyebrow">Conversion</span>
+      <h1 style="font-size:clamp(34px,3.8vw,52px); margin:14px 0 16px;">Request a demo or a proposal</h1>
+      <p class="lead" style="margin-bottom:26px;">A one-hour session to introduce you and your team to the simulation platform: your programme, one operation running end to end, and the practical questions about delivery. We only ask for what we need to prepare that conversation.</p>
+
+      <form class="card" style="gap:20px; padding:32px;" novalidate>
+        <div class="alert alert-stop" role="alert">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          <span><strong>There is 1 problem with this form.</strong><br><a href="#email" style="color:inherit; text-decoration:underline;">Enter a work email address so we can reply to you</a></span>
+        </div>
+        <div class="grid grid-2" style="gap:16px;">
+          <div class="field"><label for="fname">First name</label><input id="fname" type="text" value="Marta"></div>
+          <div class="field"><label for="lname">Last name</label><input id="lname" type="text" value="Roig"></div>
+        </div>
+        <div class="field field--error">
+          <label for="email">Work email</label>
+          <span class="hint" id="email-hint">We reply from an escolaeuropea.eu address within two working days.</span>
+          <input id="email" type="email" value="marta.roig@" aria-invalid="true" aria-describedby="email-hint email-err">
+          <span class="error-text" id="email-err"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Enter a complete email address, for example name@institution.edu</span>
+        </div>
+        <div class="grid grid-2" style="gap:16px;">
+          <div class="field"><label for="org">Institution or organisation</label><input id="org" type="text" placeholder="Institut de Logística"></div>
+          <div class="field"><label for="country">Country</label>
+            <select id="country" class="select" style="width:100%;"><option>Select a country</option><option>Spain</option><option>Italy</option><option>France</option><option>Other</option></select>
+          </div>
+        </div>
+        <fieldset style="border:0; padding:0;" id="proposal">
+          <legend style="font-size:14px; font-weight:600; color:var(--navy); padding:0 0 10px;">What are you asking for?</legend>
+          <div class="filters" style="margin-bottom:16px;">
+            <label class="tag tag--active"><input type="radio" name="ask" checked style="accent-color:var(--cyan);"> A demo session</label>
+            <label class="tag"><input type="radio" name="ask" style="accent-color:var(--cyan);"> A proposal &mdash; Flash</label>
+            <label class="tag"><input type="radio" name="ask" style="accent-color:var(--cyan);"> A proposal &mdash; Immersion Course</label>
+            <label class="tag"><input type="radio" name="ask" style="accent-color:var(--cyan);"> A proposal &mdash; Open Lab</label>
+          </div>
+          <legend style="font-size:14px; font-weight:600; color:var(--navy); padding:0 0 10px;">What describes you best?</legend>
+          <div class="filters">
+            <label class="tag tag--active"><input type="radio" name="p" checked style="accent-color:var(--cyan);"> Vocational centre</label>
+            <label class="tag"><input type="radio" name="p" style="accent-color:var(--cyan);"> University</label>
+            <label class="tag"><input type="radio" name="p" style="accent-color:var(--cyan);"> Company</label>
+            <label class="tag"><input type="radio" name="p" style="accent-color:var(--cyan);"> Port or public institution</label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="msg">What would you like to see? <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+          <textarea id="msg" rows="4" placeholder="For example: an import operation for a second-year group of 24 students, in one afternoon."></textarea></div>
+        <label class="row" style="gap:11px; align-items:flex-start; padding:16px; background:var(--panel); border-radius:var(--r-sm);">
+          <input type="checkbox" style="margin-top:3px; width:18px; height:18px; accent-color:var(--cyan);">
+          <span style="font-size:14px; line-height:1.6; color:var(--muted);">I agree that Escola Europea may use these details to answer my request. They are not used for anything else and are not shared with third parties. <a href="#">Privacy notice</a>.</span>
+        </label>
+        <div class="row">
+          <button class="btn btn-primary" type="submit">Send my request</button>
+          <span class="small">We reply within two working days.</span>
+        </div>
+      </form>
+
+      <div class="grid grid-4" style="gap:12px; margin-top:22px;">
+        <div class="card card--flat" style="padding:18px;"><span class="small" style="font-weight:700; color:var(--muted);">SUBMITTING</span><button class="btn btn-sm" disabled style="margin-top:8px;">Sending&hellip;</button></div>
+        <div class="card card--flat" style="padding:18px; background:var(--ok-bg); border-color:#BFE4CF;"><span class="small" style="font-weight:700; color:var(--ok-fg);">SUCCESS</span><p class="small" style="color:#0E5733; margin-top:6px;">Request received. Ref DEM-2026-0418.</p></div>
+        <div class="card card--flat" style="padding:18px; background:var(--stop-bg); border-color:#F5C9B8;"><span class="small" style="font-weight:700; color:var(--stop-fg);">FAILED</span><p class="small" style="color:#8C2A0C; margin-top:6px;">Not sent. Your answers are still here.</p></div>
+        <div class="card card--flat" style="padding:18px; background:var(--warn-bg); border-color:#F3DCAE;"><span class="small" style="font-weight:700; color:var(--warn-fg);">DUPLICATE</span><p class="small" style="color:#6B4700; margin-top:6px;">Already sent minutes ago.</p></div>
+      </div>
+    </div>
+
+    <aside class="stack" style="gap:16px;" id="team" data-reveal>
+      <div class="card card--deep">
+        <h3>What happens next</h3>
+        <div class="stack" style="gap:12px; margin-top:6px;">
+          <span class="row" style="gap:10px; align-items:flex-start;"><b style="color:var(--yellow);">1.</b><span style="font-size:14.5px; color:rgba(255,255,255,.78);">A short reply confirming who will contact you.</span></span>
+          <span class="row" style="gap:10px; align-items:flex-start;"><b style="color:var(--yellow);">2.</b><span style="font-size:14.5px; color:rgba(255,255,255,.78);">A 30-minute call about your programme and learners.</span></span>
+          <span class="row" style="gap:10px; align-items:flex-start;"><b style="color:var(--yellow);">3.</b><span style="font-size:14.5px; color:rgba(255,255,255,.78);">One operation walked through end to end, with your questions.</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Or try it free first</h3>
+        <p class="small">Teachers of universities and training institutes can join a Training of Trainers edition at no cost and experience the platform before bringing it to their students.</p>
+        <a class="btn btn-sun btn-sm" href="audiences.html#chiron">See the next ToT editions</a>
+      </div>
+      <div class="card">
+        <h3>Other ways in</h3>
+        <a class="card-foot" href="hub-help.html">Access support for participants &#8599;</a>
+        <a class="card-foot" href="audiences.html#trainers">Questions about teaching with it &#8599;</a>
+        <a class="card-foot" href="solutions.html#modules">The nine modules and the three formats &#8599;</a>
+        <p class="small" style="margin-top:10px;">international@escolaeuropea.eu &middot; (+34) 93 298 6070<br>Jardins de l&rsquo;Arete, Terminal Drassanes, Moll de Barcelona, 08039 Barcelona</p>
+      </div>
+      <div class="alert alert-warn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.5 17.4A2 2 0 004.2 20.4h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <span><strong>No form service is connected yet.</strong> In the first release the form runs behind a configurable adapter and will never claim a message was delivered when it was not.</span>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab">
+    <p>The simulation and training environment of Escola Europea &ndash; Intermodal Transport, Port of Barcelona. Learning by doing, across the whole logistics chain.</p>
+  </div>
+  <div>
+    <h4>Product</h4>
+    <a href="product.html">How it works</a>
+    <a href="product.html#ecosystem">Ecosystem</a>
+    <a href="hub-community.html">Virtual Port Community</a>
+    <a href="hub-tools.html">Tools &amp; simulators</a>
+  </div>
+  <div>
+    <h4>Solutions</h4>
+    <a href="solutions.html#openlab">Open Lab</a>
+    <a href="solutions.html#courses">Courses</a>
+    <a href="solutions.html#game">PVL Game</a>
+    <a href="solutions.html#companies">Simulated companies</a>
+  </div>
+  <div>
+    <h4>Who it is for</h4>
+    <a href="audiences.html#vet">Training centres</a>
+    <a href="audiences.html#universities">Universities</a>
+    <a href="audiences.html#companies">Companies</a>
+    <a href="audiences.html#trainers">Trainers</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="proof.html">Proof &amp; results</a>
+    <a href="demo.html">Request a demo</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="port-virtual-world.html">Port Virtual World</a>
+    <a href="certificates.html">Check a certificate</a>
+    <a href="news.html">News</a>
+    <a href="style.html">Design system</a>
+    <a href="game.html">Container stacker</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>Powered by Escola Europea &ndash; Intermodal Transport &middot; ISO 9001:2015 certified &middot; <span data-year>2026</span></span>
+  <span class="spacer"></span>
+  <a href="#">Legal notice</a><a href="#">Privacy &amp; cookies</a><a href="#">Accessibility</a><a href="#">English</a>
+</div>
+<div class="footer-legal">
+  <p>&copy; Escola Europea Short Sea Shipping, Spain.</p>
+  <p><strong>Notice of Copyright Protection:</strong> All rights reserved. Unauthorised use, reproduction, or distribution of this content is prohibited and may result in legal action.</p>
+  <p>The Port Virtual Lab&reg; name and mark, and all other associated trademarks and logotypes, including but not limited to SDG Lines&reg;, SDG Airlines&reg;, MEDtrade&reg; and Playforwarding&reg;, are owned by The Escola Europea de Short Sea Shipping AEIE.</p>
+</div>
+</footer>
+<a class="proto-flag" href="map.html">Prototype &middot; all screens</a>
+<aside class="cookie" data-cookie-banner role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <div style="flex:1 1 440px;">
+    <h2 id="cookie-title">Cookie consent information</h2>
+    <p id="cookie-text" style="margin-top:8px;">This website uses cookies to enhance your browsing experience and to help us understand how visitors interact with our content through Google Analytics. <strong style="color:var(--ink);">By default, no cookies that collect personal data are activated.</strong> We only use analytics cookies after you give your explicit consent. These cookies help us improve the performance and usability of our website, but they do not track you across other sites. By clicking &ldquo;Accept cookies&rdquo; you agree to the use of analytics cookies on this site. You can withdraw your consent at any time by clearing your browser cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Accept cookies</button>
+    <button class="btn btn-secondary btn-sm" type="button" data-cookie-decline>Decline</button>
+    <a class="small" href="https://www.escolaeuropea.eu/privacy-policy/" target="_blank" rel="noopener">Escola Europea&rsquo;s privacy policy &#8599;</a>
+  </div>
+</aside>
+<script src="assets/pvl.js"></script>
+<script src="assets/cookies.js"></script>
+</body>
+</html>

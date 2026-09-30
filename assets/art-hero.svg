@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylised port at blue hour: container cranes, stacked containers, a vessel and light reflections on the water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#071E45"/>
+      <stop offset=".45" stop-color="#0B2D63"/>
+      <stop offset="1" stop-color="#164194"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".42" r=".55">
+      <stop offset="0" stop-color="#009FE3" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#009FE3" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#009FE3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx=".2" cy=".78" r=".45">
+      <stop offset="0" stop-color="#F9B233" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#F9B233" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A2A5C"/>
+      <stop offset="1" stop-color="#061937"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#071E45" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061937" stop-opacity=".9"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- sky and atmosphere -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#warm)"/>
+
+  <!-- bokeh haze -->
+  <g filter="url(#softer)" opacity=".55">
+    <circle cx="1180" cy="300" r="120" fill="#009FE3" opacity=".35"/>
+    <circle cx="300" cy="640" r="150" fill="#F9B233" opacity=".16"/>
+    <circle cx="880" cy="180" r="90" fill="#4FC9C4" opacity=".16"/>
+  </g>
+
+  <!-- data network -->
+  <g stroke="#7FD4F5" stroke-width="1.4" fill="none" opacity=".40">
+    <path d="M120 250 L340 170 L620 268 L900 150 L1180 224 L1460 140"/>
+    <path d="M340 170 L470 330 L760 300 L900 150"/>
+    <path d="M760 300 L1040 372 L1180 224"/>
+    <path d="M120 250 L250 400 L470 330"/>
+  </g>
+  <g fill="#0B2D63" stroke="#7FD4F5" stroke-width="2" opacity=".85">
+    <circle cx="340" cy="170" r="6"/><circle cx="620" cy="268" r="5"/><circle cx="900" cy="150" r="7"/>
+    <circle cx="1180" cy="224" r="6"/><circle cx="470" cy="330" r="5"/><circle cx="760" cy="300" r="6"/>
+    <circle cx="1040" cy="372" r="5"/><circle cx="250" cy="400" r="4"/>
+  </g>
+  <g filter="url(#soft)" opacity=".8">
+    <circle cx="900" cy="150" r="18" fill="#009FE3" opacity=".5"/>
+    <circle cx="1180" cy="224" r="14" fill="#F9B233" opacity=".35"/>
+  </g>
+
+  <!-- far skyline -->
+  <g fill="#0A2757" opacity=".85">
+    <rect x="0" y="470" width="1600" height="60"/>
+    <rect x="60" y="410" width="90" height="62"/><rect x="180" y="432" width="60" height="40"/>
+    <rect x="1320" y="418" width="110" height="54"/><rect x="1460" y="440" width="70" height="32"/>
+  </g>
+
+  <!-- quay cranes (silhouettes) -->
+  <g fill="#081F49">
+    <g>
+      <rect x="250" y="252" width="12" height="268"/><rect x="392" y="252" width="12" height="268"/>
+      <path d="M210 236h300l60 40H210z" opacity=".95"/>
+      <rect x="318" y="276" width="12" height="96"/><rect x="296" y="364" width="58" height="40" fill="#0E3572"/>
+      <rect x="206" y="510" width="212" height="14"/>
+    </g>
+    <g opacity=".9">
+      <rect x="640" y="286" width="11" height="234"/><rect x="766" y="286" width="11" height="234"/>
+      <path d="M604 272h266l54 36H604z" opacity=".95"/>
+      <rect x="700" y="308" width="11" height="80"/><rect x="680" y="380" width="52" height="36" fill="#0E3572"/>
+      <rect x="600" y="510" width="190" height="13"/>
+    </g>
+    <g opacity=".8">
+      <rect x="1010" y="312" width="10" height="208"/><rect x="1122" y="312" width="10" height="208"/>
+      <path d="M978 300h240l48 32H978z" opacity=".95"/>
+      <rect x="1062" y="332" width="10" height="70"/><rect x="1044" y="396" width="46" height="32" fill="#0E3572"/>
+      <rect x="974" y="510" width="172" height="12"/>
+    </g>
+  </g>
+
+  <!-- container stacks, lit -->
+  <g opacity=".92">
+    <rect x="120" y="474" width="96" height="30" rx="3" fill="#164194"/>
+    <rect x="120" y="440" width="96" height="30" rx="3" fill="#009FE3" opacity=".9"/>
+    <rect x="226" y="474" width="96" height="30" rx="3" fill="#F9B233" opacity=".85"/>
+    <rect x="226" y="440" width="96" height="30" rx="3" fill="#164194"/>
+    <rect x="332" y="474" width="96" height="30" rx="3" fill="#E84E1B" opacity=".8"/>
+    <rect x="438" y="474" width="96" height="30" rx="3" fill="#164194"/>
+    <rect x="438" y="440" width="96" height="30" rx="3" fill="#009FE3" opacity=".8"/>
+    <rect x="544" y="474" width="96" height="30" rx="3" fill="#F9B233" opacity=".75"/>
+  </g>
+
+  <!-- vessel -->
+  <g>
+    <path d="M1150 452h330l-44 70h-286z" fill="#0A2757"/>
+    <rect x="1436" y="396" width="42" height="56" rx="6" fill="#081F49"/>
+    <g opacity=".95">
+      <rect x="1168" y="408" width="58" height="44" fill="#164194"/>
+      <rect x="1232" y="408" width="58" height="44" fill="#009FE3" opacity=".85"/>
+      <rect x="1296" y="408" width="58" height="44" fill="#F9B233" opacity=".8"/>
+      <rect x="1360" y="408" width="58" height="44" fill="#E84E1B" opacity=".75"/>
+      <rect x="1200" y="366" width="58" height="40" fill="#009FE3" opacity=".7"/>
+      <rect x="1264" y="366" width="58" height="40" fill="#164194"/>
+      <rect x="1328" y="366" width="58" height="40" fill="#F9B233" opacity=".65"/>
+    </g>
+  </g>
+
+  <!-- water -->
+  <rect x="0" y="520" width="1600" height="380" fill="url(#sea)"/>
+  <g opacity=".5" filter="url(#soft)">
+    <rect x="160" y="540" width="300" height="10" rx="5" fill="#009FE3"/>
+    <rect x="1180" y="560" width="280" height="12" rx="6" fill="#F9B233" opacity=".5"/>
+    <rect x="620" y="600" width="220" height="9" rx="5" fill="#4FC9C4" opacity=".6"/>
+  </g>
+  <g stroke="#7FD4F5" stroke-width="3" stroke-linecap="round" opacity=".22">
+    <path d="M120 640h180"/><path d="M360 686h120"/><path d="M700 660h200"/><path d="M980 720h150"/>
+    <path d="M1240 664h220"/><path d="M180 760h260"/><path d="M620 790h180"/><path d="M1100 800h240"/>
+  </g>
+  <rect x="0" y="600" width="1600" height="300" fill="url(#fade)"/>
+</svg>

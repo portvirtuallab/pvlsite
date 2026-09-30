@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses &amp; cohorts — PVL.ONE management</title>
+<meta name="description" content="Templates, dates, roles and access for PVL.ONE courses and cohorts.">
+<link rel="icon" href="assets/pvl-one.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/pvl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header site-header--dark">
+<a class="brand" href="admin.html"><img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab"><span class="brand-tag">Management</span></a>
+<nav class="main-nav" aria-label="Management">
+<a href="admin.html">Organisations &amp; users</a>
+<a href="admin-courses.html" aria-current="page">Courses &amp; cohorts</a>
+<a href="admin-catalog.html">Central catalogue</a>
+<a href="admin.html#tracking">Tracking</a>
+<a href="admin.html#operations">Operations</a>
+</nav>
+<div class="header-actions">
+<a class="btn btn-ghost btn-sm" href="index.html">Public website</a>
+<a class="btn btn-secondary btn-pill btn-sm" href="hub.html">Training Hub</a>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+<main id="main">
+<section class="section section--tight">
+  <div class="row" style="align-items:flex-end;">
+    <div style="flex:1 1 380px;">
+      <span class="eyebrow">Management</span>
+      <h1 style="font-size:clamp(30px,3.4vw,46px); margin-top:10px;">Courses &amp; cohorts</h1>
+      <p class="lead" style="margin-top:10px;">Build a course from templates, set the dates, assign roles and open access &mdash; in that order.</p>
+    </div>
+    <a class="btn btn-primary" href="#">New cohort</a>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="flowline">
+    <div class="flow-step" data-reveal><span class="n">01</span><h3 style="margin:8px 0;">Template</h3><p class="small">Pick the modules and the order from the central catalogue.</p></div>
+    <div class="flow-arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+    <div class="flow-step" data-reveal><span class="n">02</span><h3 style="margin:8px 0;">Dates</h3><p class="small">Session calendar and the day each module opens.</p></div>
+    <div class="flow-arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+    <div class="flow-step" data-reveal><span class="n">03</span><h3 style="margin:8px 0;">Roles</h3><p class="small">Teams, companies and who plays what.</p></div>
+    <div class="flow-arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+    <div class="flow-step" data-reveal style="border-color:#C9E3F6;"><span class="n">04</span><h3 style="margin:8px 0;">Access</h3><p class="small">Cohort links and tool credentials released to participants.</p></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="panel" data-reveal>
+    <div class="panel-title"><h3>Active cohorts</h3>
+      <select class="select" aria-label="Filter by status" data-search-filter><option value="all">All statuses</option><option value="live">Running</option><option value="draft">Draft</option><option value="done">Finished</option></select>
+    </div>
+    <table class="data">
+      <thead><tr><th scope="col">Cohort</th><th scope="col">Organisation</th><th scope="col">Dates</th><th scope="col">Participants</th><th scope="col">Modules open</th><th scope="col">Status</th><th scope="col"></th></tr></thead>
+      <tbody>
+        <tr data-search="intermodal operations cohort b" data-category="live"><td><strong>Intermodal Operations 2026 &middot; B</strong></td><td>[Vocational centre A]</td><td>15 Sep &ndash; 10 Oct</td><td>22</td><td>3 of 5</td><td><span class="badge badge-ok">Running</span></td><td><a class="p-open" href="#">Open &#8599;</a></td></tr>
+        <tr data-search="going digital cohort a" data-category="live"><td><strong>Going Digital &middot; A</strong></td><td>[Port community D]</td><td>02 Sep &ndash; 26 Sep</td><td>18</td><td>4 of 4</td><td><span class="badge badge-ok">Running</span></td><td><a class="p-open" href="#">Open &#8599;</a></td></tr>
+        <tr data-search="train the trainer september" data-category="live"><td><strong>Train-the-Trainer &middot; Sep</strong></td><td>Mixed</td><td>23 Sep &ndash; 24 Sep</td><td>14</td><td>2 of 3</td><td><span class="badge badge-info">Starting</span></td><td><a class="p-open" href="#">Open &#8599;</a></td></tr>
+        <tr data-search="university supply chain october draft" data-category="draft"><td><strong>Supply Chain Lab &middot; Oct</strong></td><td>[University B]</td><td>07 Oct &ndash; 28 Oct</td><td>&mdash;</td><td>0 of 5</td><td><span class="badge badge-mute">Draft</span></td><td><a class="p-open" href="#">Continue &#8599;</a></td></tr>
+        <tr data-search="arab academy finished june" data-category="done"><td><strong>Port Operations &middot; Jun</strong></td><td>[Academy C]</td><td>10 Jun &ndash; 14 Jun</td><td>26</td><td>Closed</td><td><span class="badge badge-mute">Finished</span></td><td><a class="p-open" href="#">Report &#8599;</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="grid grid-2" style="gap:20px;">
+    <div class="panel" data-reveal>
+      <div class="panel-title"><h3>Roles in Cohort B</h3><span class="small">5 companies &middot; 22 participants</span></div>
+      <div class="p-row" style="grid-template-columns:auto 1fr auto;"><span class="file-icon f-web">FF</span><span class="p-name" style="gap:0;"><span><strong>Mediterrani Forwarding</strong><small>4 participants &middot; documentation, operations, sales</small></span></span><a class="p-open" href="#">Edit &#8599;</a></div>
+      <div class="p-row" style="grid-template-columns:auto 1fr auto;"><span class="file-icon f-doc">SL</span><span class="p-name" style="gap:0;"><span><strong>Blau Line Shipping</strong><small>5 participants</small></span></span><a class="p-open" href="#">Edit &#8599;</a></div>
+      <div class="p-row" style="grid-template-columns:auto 1fr auto;"><span class="file-icon f-doc">TR</span><span class="p-name" style="gap:0;"><span><strong>Terminal Llevant</strong><small>4 participants</small></span></span><a class="p-open" href="#">Edit &#8599;</a></div>
+      <div class="p-row" style="grid-template-columns:auto 1fr auto;"><span class="file-icon f-tool">CB</span><span class="p-name" style="gap:0;"><span><strong>Duana Partners</strong><small>4 participants</small></span></span><a class="p-open" href="#">Edit &#8599;</a></div>
+      <div class="p-row" style="grid-template-columns:auto 1fr auto;"><span class="file-icon f-pdf">IM</span><span class="p-name" style="gap:0;"><span><strong>NovaWash Iberia</strong><small>5 participants</small></span></span><a class="p-open" href="#">Edit &#8599;</a></div>
+    </div>
+    <div class="stack" style="gap:16px;">
+      <div class="card" data-reveal>
+        <h3>Access release</h3>
+        <p>Nothing is visible to participants until the cohort is released. Module dates control what opens and when.</p>
+        <div class="row"><span class="badge badge-ok">Modules 1&ndash;3 open</span><span class="badge badge-warn">Module 4 opens 24 Sep</span><span class="badge badge-mute">Module 5 closed</span></div>
+        <button class="btn btn-primary btn-sm" type="button" style="margin-top:8px;">Release next module</button>
+      </div>
+      <div class="alert alert-warn" data-reveal>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.5 17.4A2 2 0 004.2 20.4h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <span><strong>No participant data in this prototype.</strong> Names, results and enrolment records are fixtures. The real system keeps them out of the public build entirely.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab">
+    <p>The simulation and training environment of Escola Europea &ndash; Intermodal Transport, Port of Barcelona. Learning by doing, across the whole logistics chain.</p>
+  </div>
+  <div>
+    <h4>Product</h4>
+    <a href="product.html">How it works</a>
+    <a href="product.html#ecosystem">Ecosystem</a>
+    <a href="hub-community.html">Virtual Port Community</a>
+    <a href="hub-tools.html">Tools &amp; simulators</a>
+  </div>
+  <div>
+    <h4>Solutions</h4>
+    <a href="solutions.html#openlab">Open Lab</a>
+    <a href="solutions.html#courses">Courses</a>
+    <a href="solutions.html#game">PVL Game</a>
+    <a href="solutions.html#companies">Simulated companies</a>
+  </div>
+  <div>
+    <h4>Who it is for</h4>
+    <a href="audiences.html#vet">Training centres</a>
+    <a href="audiences.html#universities">Universities</a>
+    <a href="audiences.html#companies">Companies</a>
+    <a href="audiences.html#trainers">Trainers</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="proof.html">Proof &amp; results</a>
+    <a href="demo.html">Request a demo</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="style.html">Design system</a>
+    <a href="game.html">Container stacker</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>Powered by Escola Europea &ndash; Intermodal Transport &middot; ISO 9001:2015 certified &middot; <span data-year>2026</span></span>
+  <span class="spacer"></span>
+  <a href="#">Legal notice</a><a href="#">Privacy &amp; cookies</a><a href="#">Accessibility</a><a href="#">English</a>
+</div>
+<div class="footer-legal">
+  <p>&copy; Escola Europea Short Sea Shipping, Spain.</p>
+  <p><strong>Notice of Copyright Protection:</strong> All rights reserved. Unauthorised use, reproduction, or distribution of this content is prohibited and may result in legal action.</p>
+  <p>The Port Virtual Lab&reg; name and mark, and all other associated trademarks and logotypes, including but not limited to SDG Lines&reg;, SDG Airlines&reg;, MEDtrade&reg; and Playforwarding&reg;, are owned by The Escola Europea de Short Sea Shipping AEIE.</p>
+</div>
+</footer>
+<a class="proto-flag" href="map.html">Prototype &middot; all screens</a>
+<aside class="cookie" data-cookie-banner role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <div style="flex:1 1 440px;">
+    <h2 id="cookie-title">Cookie consent information</h2>
+    <p id="cookie-text" style="margin-top:8px;">This website uses cookies to enhance your browsing experience and to help us understand how visitors interact with our content through Google Analytics. <strong style="color:var(--ink);">By default, no cookies that collect personal data are activated.</strong> We only use analytics cookies after you give your explicit consent. These cookies help us improve the performance and usability of our website, but they do not track you across other sites. By clicking &ldquo;Accept cookies&rdquo; you agree to the use of analytics cookies on this site. You can withdraw your consent at any time by clearing your browser cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Accept cookies</button>
+    <button class="btn btn-secondary btn-sm" type="button" data-cookie-decline>Decline</button>
+    <a class="small" href="https://www.escolaeuropea.eu/privacy-policy/" target="_blank" rel="noopener">Escola Europea&rsquo;s privacy policy &#8599;</a>
+  </div>
+</aside>
+<script src="assets/pvl.js"></script>
+<script src="assets/cookies.js"></script>
+</body>
+</html>

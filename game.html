@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Container Stacker — a break while you think it over</title>
+<meta name="description" content="A small PVL.ONE game: stack containers with the crane while you decide which format fits your institution.">
+<link rel="icon" href="assets/pvl-one.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/pvl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<a class="brand" href="index.html"><img src="assets/pvl-one.svg" alt="PVL.ONE — Port Virtual Lab"><span class="brand-tag">by Escola Europea</span></a>
+<nav class="main-nav" aria-label="Main">
+<a href="product.html">Product</a>
+<a href="solutions.html">Solutions</a>
+<a href="audiences.html">Who it is for</a>
+<a href="proof.html">Proof</a>
+<a href="news.html">News</a>
+</nav>
+<div class="header-actions">
+<a class="btn btn-secondary btn-pill btn-sm" href="training-access.html">Enter Training</a>
+<a class="btn btn-primary btn-sm" href="demo.html">Request a demo</a>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+<main id="main">
+<section class="section section--tight">
+  <div class="orb orb-cyan" style="top:-240px; right:-180px;"></div>
+  <div style="max-width:760px;">
+    <span class="eyebrow">Take a minute</span>
+    <h1 style="margin:14px 0 18px;">Container stacker</h1>
+    <p class="lead">Thinking it over? Run the crane. Drop each container on the stack &mdash; whatever hangs over the edge goes into the water. Land one perfectly and you keep the full width.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="grid grid-2" style="gap:22px; align-items:start;">
+    <div class="card" style="padding:16px; background:#071E45; border:0;">
+      <canvas id="stacker" width="680" height="520" style="width:100%; height:auto; display:block; border-radius:var(--r-md); outline-offset:4px; touch-action:manipulation;" aria-label="Container stacking game. Press Space or Enter to drop a container."></canvas>
+      <div class="row" style="padding:14px 6px 4px;">
+        <button class="btn btn-sun" type="button" data-start>Drop</button>
+        <span class="spacer"></span>
+        <span style="font-family:Sora,sans-serif; font-size:15px; color:#fff;">Score <strong data-score style="color:var(--yellow); font-size:20px;">0</strong></span>
+        <span style="font-family:Sora,sans-serif; font-size:15px; color:rgba(255,255,255,.7);">Best <strong data-best style="color:#fff;">0</strong></span>
+      </div>
+      <p class="small" style="padding:0 6px 4px; color:rgba(255,255,255,.62);" data-state role="status">Press Space or tap to drop</p>
+    </div>
+
+    <div class="stack" style="gap:16px;">
+      <div class="card" data-reveal>
+        <h3>How to play</h3>
+        <ul class="ticks">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Tap the quay, click <strong style="color:var(--ink);">Drop</strong> or press <kbd style="padding:2px 7px; border:1px solid var(--line); border-radius:6px; font-family:inherit; font-size:12.5px;">Space</kbd></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>The overhang is cut off and falls into the water</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>A perfect landing keeps the full width and scores double</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>Your best score stays in this browser only</li>
+        </ul>
+      </div>
+      <div class="card card--deep" data-reveal>
+        <h3>Enough playing?</h3>
+        <p>The real thing has 40+ companies, nine modules and documents that bite back when you get them wrong.</p>
+        <div class="row" style="margin-top:8px;">
+          <a class="btn btn-primary btn-sm" href="demo.html">Request a demo</a>
+          <a class="btn btn-ghost btn-sm" href="solutions.html">See the packages</a>
+        </div>
+      </div>
+      <p class="small">Built for this prototype: no tracking, no third-party code, nothing stored beyond your best score.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab">
+    <p>The simulation and training environment of Escola Europea &ndash; Intermodal Transport, Port of Barcelona. Learning by doing, across the whole logistics chain.</p>
+  </div>
+  <div>
+    <h4>Product</h4>
+    <a href="product.html">How it works</a>
+    <a href="product.html#ecosystem">Ecosystem</a>
+    <a href="hub-community.html">Virtual Port Community</a>
+    <a href="hub-tools.html">Tools &amp; simulators</a>
+  </div>
+  <div>
+    <h4>Solutions</h4>
+    <a href="solutions.html#openlab">Open Lab</a>
+    <a href="solutions.html#courses">Courses</a>
+    <a href="solutions.html#game">PVL Game</a>
+    <a href="solutions.html#companies">Simulated companies</a>
+  </div>
+  <div>
+    <h4>Who it is for</h4>
+    <a href="audiences.html#vet">Training centres</a>
+    <a href="audiences.html#universities">Universities</a>
+    <a href="audiences.html#companies">Companies</a>
+    <a href="audiences.html#trainers">Trainers</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="proof.html">Proof &amp; results</a>
+    <a href="demo.html">Request a demo</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="port-virtual-world.html">Port Virtual World</a>
+    <a href="certificates.html">Check a certificate</a>
+    <a href="news.html">News</a>
+    <a href="style.html">Design system</a>
+    <a href="game.html">Container stacker</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>Powered by Escola Europea &ndash; Intermodal Transport &middot; ISO 9001:2015 certified &middot; <span data-year>2026</span></span>
+  <span class="spacer"></span>
+  <a href="#">Legal notice</a><a href="#">Privacy &amp; cookies</a><a href="#">Accessibility</a><a href="#">English</a>
+</div>
+<div class="footer-legal">
+  <p>&copy; Escola Europea Short Sea Shipping, Spain.</p>
+  <p><strong>Notice of Copyright Protection:</strong> All rights reserved. Unauthorised use, reproduction, or distribution of this content is prohibited and may result in legal action.</p>
+  <p>The Port Virtual Lab&reg; name and mark, and all other associated trademarks and logotypes, including but not limited to SDG Lines&reg;, SDG Airlines&reg;, MEDtrade&reg; and Playforwarding&reg;, are owned by The Escola Europea de Short Sea Shipping AEIE.</p>
+</div>
+</footer>
+<a class="proto-flag" href="map.html">Prototype &middot; all screens</a>
+<aside class="cookie" data-cookie-banner role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <div style="flex:1 1 440px;">
+    <h2 id="cookie-title">Cookie consent information</h2>
+    <p id="cookie-text" style="margin-top:8px;">This website uses cookies to enhance your browsing experience and to help us understand how visitors interact with our content through Google Analytics. <strong style="color:var(--ink);">By default, no cookies that collect personal data are activated.</strong> We only use analytics cookies after you give your explicit consent. These cookies help us improve the performance and usability of our website, but they do not track you across other sites. By clicking &ldquo;Accept cookies&rdquo; you agree to the use of analytics cookies on this site. You can withdraw your consent at any time by clearing your browser cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Accept cookies</button>
+    <button class="btn btn-secondary btn-sm" type="button" data-cookie-decline>Decline</button>
+    <a class="small" href="https://www.escolaeuropea.eu/privacy-policy/" target="_blank" rel="noopener">Escola Europea&rsquo;s privacy policy &#8599;</a>
+  </div>
+</aside>
+<script src="assets/pvl.js"></script>
+<script src="assets/cookies.js"></script>
+<script src="assets/stacker.js"></script>
+</body>
+</html>

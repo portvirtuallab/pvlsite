@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a certificate — PVL.ONE</title>
+<meta name="description" content="Verify a PVL.ONE certificate of attendance or completion issued by Escola Europea.">
+<link rel="icon" href="assets/pvl-one.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/pvl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<a class="brand" href="index.html"><img src="assets/pvl-one.svg" alt="PVL.ONE — Port Virtual Lab"><span class="brand-tag">by Escola Europea</span></a>
+<nav class="main-nav" aria-label="Main">
+<a href="product.html">Product</a>
+<a href="solutions.html">Solutions</a>
+<a href="audiences.html">Who it is for</a>
+<a href="proof.html">Proof</a>
+<a href="news.html">News</a>
+</nav>
+<div class="header-actions">
+<a class="btn btn-secondary btn-pill btn-sm" href="training-access.html">Enter Training</a>
+<a class="btn btn-primary btn-sm" href="demo.html">Request a demo</a>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>Check a certificate</b></nav>
+<main id="main">
+<section class="section section--tight">
+  <div class="orb orb-cyan" style="top:-220px; right:-170px;"></div>
+  <div style="max-width:780px;">
+    <span class="eyebrow">Certificates</span>
+    <h1 style="margin:14px 0 18px;">Check a certificate</h1>
+    <p class="lead">Certificates issued after a PVL.ONE course carry a reference number. Enter it to confirm that it was issued by Escola Europea &ndash; Intermodal Transport, and for which course.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="grid grid-2" style="gap:22px; align-items:start;">
+    <div class="panel" data-reveal>
+      <div class="panel-title"><h3>Verification</h3><span class="badge badge-info">Public check</span></div>
+      <form class="stack" style="gap:16px; padding:24px;">
+        <div class="field">
+          <label for="cert-ref">Certificate reference</label>
+          <span class="hint">Printed at the bottom of the certificate, for example PVL-2026-0418-EN.</span>
+          <input id="cert-ref" type="text" placeholder="PVL-YYYY-NNNN-XX" value="PVL-2026-0418-EN">
+        </div>
+        <div class="field">
+          <label for="cert-name">Surname of the holder</label>
+          <input id="cert-name" type="text" placeholder="As printed on the certificate">
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" type="submit">Check certificate</button>
+          <span class="small">No personal data is stored by this check.</span>
+        </div>
+      </form>
+      <div style="padding:0 24px 24px;">
+        <div class="alert alert-ok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+          <span><strong>Valid certificate.</strong><br>Course: Intermodal Operations 2026 &middot; Issued 18 April 2026 &middot; Escola Europea &ndash; Intermodal Transport.<br><span class="small" style="color:inherit;">Example of a successful result.</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stack" style="gap:16px;">
+      <div class="card" data-reveal>
+        <h3>What the check tells you</h3>
+        <ul class="ticks">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> That the reference exists and was issued by Escola Europea</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Which course and edition it belongs to</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> The issue date and the language of the certificate</li>
+        </ul>
+        <p class="small">It does not publish grades, personal data or contact details of the holder.</p>
+      </div>
+      <div class="alert alert-stop" data-reveal>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        <span><strong>Reference not found.</strong> Check the spelling, or write to international@escolaeuropea.eu with a copy of the document. Example of the failure state.</span>
+      </div>
+      <div class="alert alert-warn" data-reveal>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.5 17.4A2 2 0 004.2 20.4h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <span><strong>Prototype note.</strong> This checker is an interface only. The verification service, the reference format and which courses issue certificates are pending confirmation by the product owner.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <img src="assets/pvl-one-white.svg" alt="PVL.ONE — Port Virtual Lab">
+    <p>The simulation and training environment of Escola Europea &ndash; Intermodal Transport, Port of Barcelona. Learning by doing, across the whole logistics chain.</p>
+  </div>
+  <div>
+    <h4>Product</h4>
+    <a href="product.html">How it works</a>
+    <a href="product.html#ecosystem">Ecosystem</a>
+    <a href="hub-community.html">Virtual Port Community</a>
+    <a href="hub-tools.html">Tools &amp; simulators</a>
+  </div>
+  <div>
+    <h4>Solutions</h4>
+    <a href="solutions.html#openlab">Open Lab</a>
+    <a href="solutions.html#courses">Courses</a>
+    <a href="solutions.html#game">PVL Game</a>
+    <a href="solutions.html#companies">Simulated companies</a>
+  </div>
+  <div>
+    <h4>Who it is for</h4>
+    <a href="audiences.html#vet">Training centres</a>
+    <a href="audiences.html#universities">Universities</a>
+    <a href="audiences.html#companies">Companies</a>
+    <a href="audiences.html#trainers">Trainers</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="proof.html">Proof &amp; results</a>
+    <a href="demo.html">Request a demo</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="port-virtual-world.html">Port Virtual World</a>
+    <a href="certificates.html">Check a certificate</a>
+    <a href="news.html">News</a>
+    <a href="style.html">Design system</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>Powered by Escola Europea &ndash; Intermodal Transport &middot; ISO 9001:2015 certified &middot; <span data-year>2026</span></span>
+  <span class="spacer"></span>
+  <a href="#">Legal notice</a><a href="#">Privacy &amp; cookies</a><a href="#">Accessibility</a><a href="#">English</a>
+</div>
+<div class="footer-legal">
+  <p>&copy; Escola Europea Short Sea Shipping, Spain.</p>
+  <p><strong>Notice of Copyright Protection:</strong> All rights reserved. Unauthorised use, reproduction, or distribution of this content is prohibited and may result in legal action.</p>
+  <p>The Port Virtual Lab&reg; name and mark, and all other associated trademarks and logotypes, including but not limited to SDG Lines&reg;, SDG Airlines&reg;, MEDtrade&reg; and Playforwarding&reg;, are owned by The Escola Europea de Short Sea Shipping AEIE.</p>
+</div>
+</footer>
+<a class="proto-flag" href="map.html">Prototype &middot; all screens</a>
+<aside class="cookie" data-cookie-banner role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <div style="flex:1 1 440px;">
+    <h2 id="cookie-title">Cookie consent information</h2>
+    <p id="cookie-text" style="margin-top:8px;">This website uses cookies to enhance your browsing experience and to help us understand how visitors interact with our content through Google Analytics. <strong style="color:var(--ink);">By default, no cookies that collect personal data are activated.</strong> We only use analytics cookies after you give your explicit consent. These cookies help us improve the performance and usability of our website, but they do not track you across other sites. By clicking &ldquo;Accept cookies&rdquo; you agree to the use of analytics cookies on this site. You can withdraw your consent at any time by clearing your browser cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Accept cookies</button>
+    <button class="btn btn-secondary btn-sm" type="button" data-cookie-decline>Decline</button>
+    <a class="small" href="https://www.escolaeuropea.eu/privacy-policy/" target="_blank" rel="noopener">Escola Europea&rsquo;s privacy policy &#8599;</a>
+  </div>
+</aside>
+<script src="assets/pvl.js"></script>
+<script src="assets/cookies.js"></script>
+</body>
+</html>
