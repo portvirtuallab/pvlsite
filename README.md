@@ -22,7 +22,7 @@ no framework, no dependencies, no tracking. Open `index.html` and it runs.
 | `product.html` | The platform: method, digitalised document flow, support for educators, Port Virtual World vision |
 | `solutions.html` | Three entry points (Flash, Immersion Course, Open Lab) and the nine modules |
 | `audiences.html` | Training centres, universities, companies, trainers, and the Chiron programme with the ToT calendar |
-| `proof.html` | Figures, active communities, testimonials, ISO certification, partners |
+| `proof.html` | Figures, the interactive **network map and directory**, testimonials, ISO certification, partners |
 | `news.html` | News index with editorial rules |
 | `port-virtual-world.html` | The virtual port community and the wider ecosystem roadmap |
 | `certificates.html` | Public certificate verification by reference number |
@@ -77,6 +77,9 @@ Full reference: open `style.html`.
 | `assets/pvl.js` | Menu, directory filters, reveal on scroll |
 | `assets/cookies.js` | Cookie consent — analytics stay off until explicit consent |
 | `assets/stacker.js` | The Container Stacker game |
+| `assets/network.css` | Styles for the network map and directory on `proof.html` |
+| `assets/network.js` | Map projection, markers, filters and directory logic |
+| `assets/network-data.js` | The member list: institutions, cities, countries and regions |
 
 ---
 

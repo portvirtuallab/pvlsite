@@ -1,6 +1,6 @@
 # Minimal static file server for previewing the prototype locally.
 param(
-  [string]$Root = "$PSScriptRoot\site",
+  [string]$Root = (Split-Path -Parent $PSScriptRoot),
   [int]$Port = 8099
 )
 $listener = New-Object System.Net.HttpListener

@@ -57,7 +57,7 @@ how to come back, before the jump.
 | `product.html` | The platform | Constructivist method, digitalised document flow, support for educators, Port Virtual World vision |
 | `solutions.html` | Offer | Flash / Immersion Course / Open Lab, the nine modules, simulated companies |
 | `audiences.html` | Who it is for | VET, universities, companies and port communities, trainers, **Chiron programme + ToT calendar** |
-| `proof.html` | Evidence | Figures, 11 countries, testimonials, ISO 9001:2015, partners, PLIKA |
+| `proof.html` | Evidence | Figures, the **network explorer** (`#network`: interactive map + directory of the member institutions), testimonials, ISO 9001:2015, partners, PLIKA |
 | `news.html` | News | Filterable index with editorial rules |
 | `port-virtual-world.html` | Roadmap | Virtual port community, digital twins, green corridors, ecosystem components |
 | `certificates.html` | Verification | Certificate check by reference, with valid / not-found states |
@@ -185,6 +185,8 @@ pvlsite/
 │   ├── pvl.js               # menu, directory filters, reveal on scroll
 │   ├── cookies.js           # consent; analytics stay off until accepted
 │   ├── stacker.js           # Container Stacker game
+│   ├── network.css/.js      # network map + directory (proof.html#network)
+│   ├── network-data.js      # member institutions, cities, countries, regions
 │   ├── pvl-one.svg          # official logo (+ white variant)
 │   └── art-hero.svg         # hero and port artwork
 ├── docs/architecture.md     # this document
@@ -233,6 +235,20 @@ Still placeholders, marked as such in the pages:
 - certificate reference format and the verification service.
 
 Prices are published as **On request** by decision of the product owner.
+
+### The network explorer
+
+`assets/network-data.js` holds the member list taken from the PVL.ONE member map maintained by
+Escola Europea: 34 institutions, 27 cities, 10 countries, 3 continents, each with its type of
+education and its own website. The map geometry is a Natural Earth projection of public country
+outlines; the logos are loaded from the institutions' own hosted assets, with an initials
+fallback when one fails.
+
+> **Figures to reconcile.** The stat strip at the top of `proof.html` still carries the 2026
+> presentation's numbers (*30+ institutions, 11 countries*), while the explorer below it counts
+> **34 institutions in 10 countries** from the member list. One of the two sources is out of
+> date; the product owner should decide which figure is canonical before launch.
+
 
 ---
 
