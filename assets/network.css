@@ -225,19 +225,20 @@
 .nx-card:hover, .nx-card:focus-within { transform: translateY(-4px); box-shadow: var(--shadow-sm); border-color: #C2D3E7; }
 
 .nx-logo {
-  display: grid; place-items: center;
+  display: flex; align-items: center; justify-content: center;
   height: 112px; margin-bottom: 18px;
   padding: 10px 6px;
   border-radius: var(--r-sm);
   background: #fff;
   overflow: hidden;
 }
-/* explicit box + object-fit: a percentage max-height on a grid item is not
-   resolved reliably, which let the logos spill over the card title */
+/* Percentage heights do not resolve on a centred grid/flex item whose row is
+   content-sized, so the logos kept rendering at their natural size. The cap is
+   in absolute pixels (112px box minus 2x10px padding), which always resolves. */
 .nx-logo img {
   display: block;
-  width: 100%; height: 100%;
-  object-fit: contain; object-position: center;
+  width: auto; height: auto;
+  max-width: 100%; max-height: 92px;
 }
 .nx-logo-fallback {
   display: grid; place-items: center;
