@@ -752,3 +752,7 @@ table.data tbody tr:hover { background: #F9FBFD; }
   .footer-rel { gap: 20px 26px; }
   .login-menu { width: min(272px, calc(100vw - 32px)); }
 }
+
+/* Figures never travel without their source. */
+.figure-source { margin: 14px 0 0; font-size: 12.5px; color: var(--muted); }
+.section--deep .figure-source { color: rgba(255,255,255,.58); }
