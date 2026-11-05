@@ -349,3 +349,9 @@
 
 /* the explorer lives inside proof.html; keep its heading clear of the sticky header */
 #network { scroll-margin-top: 96px; }
+
+/* A country in the network whose institution is not yet confirmed. It holds the
+   map marker but is never counted as a confirmed institution. */
+.nx-card.is-pending { border-style: dashed; background: var(--panel); }
+.nx-card.is-pending .nx-logo { background: transparent; }
+.nx-pending-note { margin: 8px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }

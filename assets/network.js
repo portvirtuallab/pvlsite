@@ -26,6 +26,7 @@
   var codeOf = function (c) { return (D.countries[c] || {}).code || c.slice(0, 2).toUpperCase(); };
   var catColour = function (t) { return D.categoryColors[t] || '#164194'; };
   var locationsOf = function (m) { return m.locations || [m.city]; };
+  var confirmedOnly = function (list) { return list.filter(function (m) { return !m.pending; }); };
   var citiesOf = function (list) {
     return uniq(list.reduce(function (acc, m) { return acc.concat(locationsOf(m)); }, []));
   };
@@ -466,7 +467,7 @@
       : state.country !== 'All' ? (citiesOf(list).join(' · ') || 'No institutions match the current filters.')
       : list.length ? countriesIn.join(', ') + ', connected through practical learning.'
       : 'No institutions match the current filters.';
-    $('nx-fig-inst').textContent = list.length;
+    $('nx-fig-inst').textContent = confirmedOnly(list).length;
     $('nx-fig-city').textContent = citiesOf(list).length;
     $('nx-fig-ctry').textContent = countriesIn.length;
 
@@ -510,7 +511,9 @@
       : state.country !== 'All' ? ' in ' + state.country
       : state.region !== 'All' ? ' in ' + state.region
       : ' in the network';
-    $('nx-results').innerHTML = 'Showing <strong>' + plural(list.length, 'institution') + '</strong>' + esc(scope) +
+    var pendingInView = list.length - confirmedOnly(list).length;
+    $('nx-results').innerHTML = 'Showing <strong>' + plural(confirmedOnly(list).length, 'institution') + '</strong>' + esc(scope) +
+      (pendingInView ? ' &middot; ' + pendingInView + ' to be confirmed' : '') +
       (state.type !== 'All' ? ' · ' + esc(state.type) : '') +
       (state.query ? ' · matching “' + esc(state.query) + '”' : '') +
       ' · ' + plural(citiesOf(list).length, 'city') + ' · ' + plural(countriesIn.length, 'country');
@@ -518,9 +521,10 @@
     /* cards */
     $('nx-cards').innerHTML = list.map(function (m, i) {
       var type = typesOf(m)[0];
-      var initials = (m.short || m.name).replace(/[^A-Za-zÀ-ÿ ]/g, '').split(/\s+/)
-        .map(function (w) { return w.charAt(0); }).join('').slice(0, 3).toUpperCase();
-      return '<li class="nx-card" style="--cat:' + catColour(type) + '" data-city="' + esc(m.city) +
+      var short = (m.short || m.name).replace(/[^A-Za-zÀ-ÿ ]/g, '').trim();
+      var initials = (short.indexOf(' ') === -1 && short.length <= 3 ? short
+        : short.split(/\s+/).map(function (w) { return w.charAt(0); }).join('')).slice(0, 3).toUpperCase();
+      return '<li class="nx-card' + (m.pending ? ' is-pending' : '') + '" style="--cat:' + catColour(type) + '" data-city="' + esc(m.city) +
         '" data-country="' + esc(m.country) + '">' +
         '<span class="nx-logo">' +
           (m.logo ? '<img src="' + esc(m.logo) + '" alt="" loading="lazy" decoding="async" ' +
@@ -531,6 +535,8 @@
         '<p class="nx-where">' + esc(m.city) + ', ' + esc(m.country) + '</p>' +
         '<div class="nx-card-foot">' +
           '<span class="nx-cat">' + esc(m.type) + '</span>' +
+          (m.pending ? '<p class="nx-pending-note">Listed because the country is part of the network. ' +
+            'The institution, city and programme are still to be confirmed.</p>' : '') +
           '<div class="nx-actions">' +
             (m.url
               ? '<a href="' + esc(m.url) + '" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span>' +

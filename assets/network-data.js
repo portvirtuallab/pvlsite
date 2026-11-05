@@ -174,6 +174,20 @@ window.PVL_NETWORK = {
         -6.1,
         42.2
       ]
+    },
+    "Egypt": {
+      "code": "EG",
+      "region": "Africa",
+      "anchor": [
+        26.8,
+        30.8
+      ],
+      "bounds": [
+        24.7,
+        22,
+        36.9,
+        31.7
+      ]
     }
   },
   "cities": {
@@ -288,6 +302,10 @@ window.PVL_NETWORK = {
     "Benoni / Johannesburg": [
       -26.188,
       28.321
+    ],
+    "To be confirmed": [
+      26.8,
+      30.8
     ]
   },
   "members": [
@@ -720,6 +738,17 @@ window.PVL_NETWORK = {
       ],
       "logo": "https://d25ltszcjeom5i.cloudfront.net/192897/cnjmmndpjw/REPELEGA.png",
       "url": "https://cifprepelega.net/"
+    },
+    {
+      "name": "Egypt — institution to be confirmed",
+      "short": "EG",
+      "city": "To be confirmed",
+      "country": "Egypt",
+      "type": "To be confirmed",
+      "types": [],
+      "pending": true,
+      "logo": "",
+      "url": ""
     }
   ],
   "categoryColors": {
