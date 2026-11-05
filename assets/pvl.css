@@ -692,3 +692,70 @@ table.data tbody tr:hover { background: #F9FBFD; }
 .video-facade:hover .video-play { transform: scale(1.07); }
 .video-facade h3 { color: #fff; font-size: clamp(20px, 2vw, 26px); }
 .video-facade p { color: rgba(255,255,255,.78); font-size: 14.5px; max-width: 460px; }
+
+/* ---------- Log in disclosure (header) ---------- */
+/* Private access lives apart from the navigation: one discreet control with the
+   two destinations behind it. <details> keeps it keyboard-accessible with no JS. */
+.login { position: relative; }
+.login > summary {
+  display: inline-flex; align-items: center; gap: 6px;
+  white-space: nowrap;
+  min-height: 40px; padding: 0 14px;
+  border-radius: var(--r-xs);
+  font-size: 14px; font-weight: 600; color: var(--muted);
+  cursor: pointer; list-style: none;
+  transition: color .2s var(--ease), background .2s var(--ease);
+}
+.login > summary::-webkit-details-marker { display: none; }
+.login > summary::after {
+  content: ''; width: 6px; height: 6px;
+  border-right: 1.8px solid currentColor; border-bottom: 1.8px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .2s var(--ease);
+}
+.login[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.login > summary:hover { color: var(--navy); background: var(--panel); }
+.login > summary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+.login-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 60;
+  width: 272px; padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  box-shadow: var(--shadow-sm);
+}
+.login-menu a { display: block; padding: 10px 12px; border-radius: var(--r-xs); }
+.login-menu a:hover { background: var(--panel); }
+.login-menu strong { display: block; font-size: 14.5px; font-weight: 600; color: var(--navy); }
+.login-menu span { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); }
+
+/* ---------- Footer relationship strip ---------- */
+/* The wording carries the relationship: Powered by / Part of / Created with the
+   support of. Logos share one height and stay smaller than the PVL logo. */
+.footer-rel {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 42px;
+  margin-top: 40px; padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.footer-rel > div { display: flex; flex-direction: column; gap: 9px; }
+.footer-rel span:not(.logo-slot) {
+  font-size: 10.5px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+}
+.footer-partners { flex-direction: row !important; align-items: center; gap: 14px !important; flex-wrap: wrap; }
+.footer-partners > span:not(.logo-slot) { align-self: center; }
+.logo-slot {
+  display: block; height: 30px;
+  border: 1px dashed rgba(255,255,255,.26); border-radius: 6px;
+  background: rgba(255,255,255,.05);
+}
+@media (max-width: 700px) {
+  .footer-rel { gap: 20px 26px; }
+  .login-menu { width: min(272px, calc(100vw - 32px)); }
+}
+
+/* Figures never travel without their source. */
+.figure-source { margin: 14px 0 0; font-size: 12.5px; color: var(--muted); }
+.section--deep .figure-source { color: rgba(255,255,255,.58); }
+
+/* Logo slot on a light background (the dark variant lives with .footer-rel). */
+.logo-slot--light { border-color: var(--line); background: var(--panel); }
