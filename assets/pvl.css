@@ -756,3 +756,6 @@ table.data tbody tr:hover { background: #F9FBFD; }
 /* Figures never travel without their source. */
 .figure-source { margin: 14px 0 0; font-size: 12.5px; color: var(--muted); }
 .section--deep .figure-source { color: rgba(255,255,255,.58); }
+
+/* Logo slot on a light background (the dark variant lives with .footer-rel). */
+.logo-slot--light { border-color: var(--line); background: var(--panel); }
