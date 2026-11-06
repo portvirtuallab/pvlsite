@@ -151,10 +151,16 @@ p { line-height: 1.7; }
 }
 .brand { display: inline-flex; align-items: center; gap: 14px; }
 .brand img { width: 148px; height: auto; display: block; }
+/* The lockup: PVL leads, Escola Europea is the organisation behind it. The guide
+   allows "Powered by" or "By" for Escola here, and it stays as text: the Escola
+   mark is a dense stacked logo that renders 38x34px at header scale, where its
+   wordmark cannot be read. That is why the guide's screen lockup is text-only.
+   The logo itself runs at 54px in the footer, where it has room. */
 .brand-tag {
   padding-left: 14px; border-left: 1px solid var(--line);
   font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
 }
+.site-header--dark .brand-tag { border-left-color: rgba(255,255,255,.25); color: var(--on-navy-muted); }
 .main-nav { display: flex; align-items: center; gap: 4px; flex-grow: 1; }
 .main-nav a {
   padding: 10px 14px; border-radius: 10px;
