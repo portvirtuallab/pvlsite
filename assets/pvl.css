@@ -18,6 +18,8 @@
   --line: #DFE7EF;
   --panel: #F5F8FB;
   --white: #FFFFFF;
+  --on-navy: #DCE6F5;        /* body text on navy and the deep gradient */
+  --on-navy-muted: #C9D6EA;  /* labels, captions and small print on navy */
 
   /* status */
   --ok-bg: #E8F6EE; --ok-fg: #12693F;
@@ -31,6 +33,7 @@
   --grad-sun: linear-gradient(145deg, #D66F14, #F9B233);
   --grad-import: linear-gradient(145deg, #164194, #445FA8);
   --grad-air: linear-gradient(145deg, #007EB6, #009FE3);
+  --grad-neg: linear-gradient(145deg, #7A2B8F, #164194);
 
   /* shape + depth (always blue-tinted shadows, never black) */
   --r-sm: 12px;
@@ -38,8 +41,8 @@
   --r-lg: 28px;
   --shadow-xs: 0 2px 10px rgba(11, 45, 99, .05);
   --shadow-sm: 0 10px 28px rgba(11, 45, 99, .07);
-  --shadow-md: 0 20px 55px rgba(7, 27, 51, .12);
-  --shadow-lg: 0 35px 90px rgba(7, 27, 51, .28);
+  --shadow-md: 0 20px 55px rgba(11, 45, 99, .12);
+  --shadow-lg: 0 35px 90px rgba(11, 45, 99, .28);
 
   --maxw: 1216px;
   --gutter: max(20px, calc((100vw - var(--maxw)) / 2));
@@ -289,8 +292,10 @@ p { line-height: 1.7; }
 .m-import { background: var(--grad-import); }
 .m-air { background: var(--grad-air); }
 .m-rail { background: var(--grad-sun); }
-.m-rail p, .m-rail .label { color: rgba(255,255,255,.88); }
-.m-game { background: linear-gradient(145deg, #7A2B8F, #164194); }
+.m-rail, .m-rail h3, .m-rail .arrow { color: var(--navy); }
+.m-rail p, .m-rail .label { color: rgba(11,45,99,.78); }
+.m-rail .icon { background: rgba(11,45,99,.12); }
+.m-game { background: var(--grad-neg); }
 
 /* ---------- white info cards ---------- */
 .card {
@@ -559,9 +564,9 @@ table.data tbody tr:hover { background: #F9FBFD; }
   backdrop-filter: blur(1.5px);
 }
 .hero--image h1 { color: #fff; }
-.hero--image h1 span { color: #7FD4F5; }
+.hero--image h1 span { color: var(--cyan); }
 .hero--image .lead { color: rgba(255,255,255,.82); }
-.hero--image .eyebrow { color: #7FD4F5; }
+.hero--image .eyebrow { color: var(--cyan); }
 .hero--image .hero-metrics { border-top-color: rgba(255,255,255,.18); }
 .hero--image .hero-metrics strong { color: #fff; }
 .hero--image .hero-metrics span { color: rgba(255,255,255,.66); }
@@ -729,25 +734,27 @@ table.data tbody tr:hover { background: #F9FBFD; }
 .login-menu span { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); }
 
 /* ---------- Footer relationship strip ---------- */
-/* The wording carries the relationship: Powered by / Part of / Created with the
-   support of. Logos share one height and stay smaller than the PVL logo. */
+/* The wording carries the relationship. Following the guide's PartnerStrip, the
+   strip sits on `panel` so the colour logos read: CHIRON and Click & Cargo have
+   no white version. Every logo shares one height and stays smaller than PVL's. */
 .footer-rel {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 42px;
-  margin-top: 40px; padding-top: 28px;
-  border-top: 1px solid rgba(255,255,255,.12);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 18px 36px;
+  margin-top: 40px; padding: 16px 20px;
+  background: var(--panel); border-radius: var(--r-sm);
 }
-.footer-rel > div { display: flex; flex-direction: column; gap: 9px; }
-.footer-rel span:not(.logo-slot) {
-  font-size: 10.5px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
-  color: rgba(255,255,255,.45);
+.footer-rel-item { display: flex; flex-direction: column; gap: 9px; }
+.footer-rel-item > span:not(.logo-slot) {
+  font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap;
 }
-.footer-partners { flex-direction: row !important; align-items: center; gap: 14px !important; flex-wrap: wrap; }
-.footer-partners > span:not(.logo-slot) { align-self: center; }
+.footer-rel-item img { height: 34px; width: auto; display: block; }
+.footer-rel-item--todo { flex-direction: row; align-items: center; gap: 12px; flex-wrap: wrap; }
+.footer-rel-item--todo > span:not(.logo-slot) { align-self: center; }
 .logo-slot {
-  display: block; height: 30px;
-  border: 1px dashed rgba(255,255,255,.26); border-radius: 6px;
-  background: rgba(255,255,255,.05);
+  display: block; height: 28px;
+  border: 1px dashed #B9CBE0; border-radius: 6px;
+  background: rgba(11,45,99,.04);
 }
+
 @media (max-width: 700px) {
   .footer-rel { gap: 20px 26px; }
   .login-menu { width: min(272px, calc(100vw - 32px)); }
@@ -759,3 +766,11 @@ table.data tbody tr:hover { background: #F9FBFD; }
 
 /* Logo slot on a light background (the dark variant lives with .footer-rel). */
 .logo-slot--light { border-color: var(--line); background: var(--panel); }
+
+/* The brand lockup never shrinks into the navigation. With CHIRON added, the nav
+   and the "BY ESCOLA EUROPEA" label collide between 1000 and 1180px, so the label
+   steps aside there; below 1000px the horizontal nav is gone and it returns. */
+.brand { flex-shrink: 0; }
+@media (min-width: 1001px) and (max-width: 1180px) {
+  .brand-tag { display: none; }
+}
