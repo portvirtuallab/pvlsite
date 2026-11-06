@@ -837,3 +837,6 @@ table.data tbody tr:hover { background: #F9FBFD; }
 .teaser:hover { border-color: var(--cyan); }
 .teaser p { flex: 1 1 360px; margin: 0; font-size: 15.5px; color: var(--ink); }
 .teaser-go { font-size: 14px; font-weight: 700; color: var(--blue); white-space: nowrap; }
+
+/* The Ambassador badge is the only one on a gradient (Style Guide v1.1). */
+.badge-ambassador { background: var(--grad-main); color: #fff; }
