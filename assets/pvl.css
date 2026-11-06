@@ -143,7 +143,7 @@ p { line-height: 1.7; }
 /* ---------- header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 40;
-  display: flex; align-items: center; gap: 28px;
+  display: flex; align-items: center; gap: 24px;
   min-height: 82px; padding: 12px var(--gutter);
   background: rgba(255,255,255,.88);
   backdrop-filter: saturate(160%) blur(14px);
@@ -151,10 +151,16 @@ p { line-height: 1.7; }
 }
 .brand { display: inline-flex; align-items: center; gap: 14px; }
 .brand img { width: 148px; height: auto; display: block; }
+/* The lockup: PVL leads, Escola Europea is the organisation behind it. The guide
+   allows "Powered by" or "By" for Escola here, and it stays as text: the Escola
+   mark is a dense stacked logo that renders 38x34px at header scale, where its
+   wordmark cannot be read. That is why the guide's screen lockup is text-only.
+   The logo itself runs at 54px in the footer, where it has room. */
 .brand-tag {
   padding-left: 14px; border-left: 1px solid var(--line);
   font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
 }
+.site-header--dark .brand-tag { border-left-color: rgba(255,255,255,.25); color: var(--on-navy-muted); }
 .main-nav { display: flex; align-items: center; gap: 4px; flex-grow: 1; }
 .main-nav a {
   padding: 10px 14px; border-radius: 10px;
@@ -867,3 +873,58 @@ table.data tbody tr:hover { background: #F9FBFD; }
   .logo-wall { gap: 16px 24px; padding: 20px; }
   .logo-wall img { height: 30px; max-width: 96px; }
 }
+
+/* ---------- Platform: the fact row under the hero ---------- */
+/* Product facts, not performance figures: the official figure set stays in
+   KeyFigures, and no unconfirmed count appears here. */
+.fact-row {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px;
+  margin-top: 34px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+}
+.fact-row div { padding: 18px 20px; background: #fff; }
+.fact-row strong {
+  display: block; font-family: Sora, sans-serif; font-size: clamp(18px, 1.8vw, 24px);
+  letter-spacing: -.03em; color: var(--navy);
+}
+.fact-row span { display: block; margin-top: 4px; font-size: 12.5px; color: var(--muted); }
+@media (max-width: 760px) { .fact-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.hero-link--dark { color: var(--blue); border-bottom-color: rgba(22,65,148,.35); }
+.hero-link--dark:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+/* ---------- Formats: the attribute list on each card ---------- */
+.spec { margin: 16px 0 20px; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; }
+.spec dt { font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.spec dd { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
+
+/* ---------- Formats: the comparison table ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); background: #fff; }
+.compare { width: 100%; border-collapse: collapse; min-width: 720px; font-size: 14px; }
+.compare th, .compare td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.compare thead th {
+  position: sticky; top: 0; background: var(--navy); color: #fff;
+  font-family: Sora, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: -.01em;
+}
+.compare tbody th { font-weight: 600; color: var(--navy); background: var(--panel); white-space: nowrap; }
+.compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+.compare td { color: var(--ink); }
+/* A cell nobody has confirmed looks unconfirmed, rather than blank or invented. */
+.tbc { color: var(--muted); font-style: italic; }
+
+/* ---------- Formats: a three-step ladder reuses the operation path ---------- */
+.op-path--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.op-path--three small { font-size: 12.5px; }
+@media (max-width: 900px) { .op-path--three { grid-template-columns: minmax(0, 1fr); } }
+
+
+/* The decorative orbs are absolutely positioned past the section edge. .hero
+   clips them; a plain .section did not, so every page with an orb scrolled
+   sideways. Clip only the sections that hold one, because overflow:hidden on
+   every section would break position:sticky inside them. */
+.section:has(> .orb) { overflow: hidden; }
+
+/* "Powered by Escola Europea" is longer than the label it replaced, and the
+   header content measured 1303px against a 1216px maximum, so it overflowed at
+   every width. The label now wraps to two lines inside the lockup. */
+.brand-tag { max-width: 124px; white-space: normal; line-height: 1.45; }
