@@ -76,4 +76,34 @@
   /* ---- current year ---- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* ---- demo form: preselect from the link ----
+     Profile buttons across the site link to demo.html?profile=vet|university|
+     port|company|trainer, and the proposal links use #proposal. Reflect both in
+     the form, including the .tag--active class the radios are styled with. */
+  (function () {
+    var form = document.querySelector('#proposal');
+    if (!form) return;
+
+    function choose(name, value) {
+      if (!value) return;
+      var input = form.querySelector('input[name="' + name + '"][value="' + value + '"]');
+      if (!input) return;
+      input.checked = true;
+      [].forEach.call(form.querySelectorAll('input[name="' + name + '"]'), function (other) {
+        other.closest('.tag').classList.toggle('tag--active', other === input);
+      });
+    }
+
+    var params = new URLSearchParams(location.search);
+    choose('p', params.get('profile'));
+    if (params.get('ask')) choose('ask', params.get('ask'));
+
+    /* keep the class in step when someone clicks instead */
+    form.addEventListener('change', function (e) {
+      if (e.target.type !== 'radio') return;
+      choose(e.target.name, e.target.value);
+    });
+  })();
+
 })();
