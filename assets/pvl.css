@@ -738,22 +738,24 @@ table.data tbody tr:hover { background: #F9FBFD; }
    strip sits on `panel` so the colour logos read: CHIRON and Click & Cargo have
    no white version. Every logo shares one height and stays smaller than PVL's. */
 .footer-rel {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 18px 36px;
-  margin-top: 40px; padding: 16px 20px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 20px 44px;
+  margin-top: 40px; padding: 18px 24px;
   background: var(--panel); border-radius: var(--r-sm);
 }
-.footer-rel-item { display: flex; flex-direction: column; gap: 9px; }
-.footer-rel-item > span:not(.logo-slot) {
+/* align-items:start matters: in a column flex container the default stretch
+   forces the image's width, and `width:auto` then resolves to the column width,
+   which distorts every logo. */
+.footer-rel-item { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.footer-rel-item > span {
   font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap;
 }
-.footer-rel-item img { height: 34px; width: auto; display: block; }
-.footer-rel-item--todo { flex-direction: row; align-items: center; gap: 12px; flex-wrap: wrap; }
-.footer-rel-item--todo > span:not(.logo-slot) { align-self: center; }
-.logo-slot {
-  display: block; height: 28px;
-  border: 1px dashed #B9CBE0; border-radius: 6px;
-  background: rgba(11,45,99,.04);
-}
+.footer-rel-item img { width: auto; display: block; align-self: flex-start; }
+/* Optically balanced rather than mathematically equal: a tall stacked logo needs
+   more height than a wide wordmark to read at the same size. */
+.footer-rel-item img[alt^="Escola"] { height: 54px; }
+.footer-rel-item img[alt^="CHIRON"] { height: 50px; }
+.footer-rel-item img[alt^="Click"]  { height: 30px; }
+
 
 @media (max-width: 700px) {
   .footer-rel { gap: 20px 26px; }
@@ -840,3 +842,28 @@ table.data tbody tr:hover { background: #F9FBFD; }
 
 /* The Ambassador badge is the only one on a gradient (Style Guide v1.1). */
 .badge-ambassador { background: var(--grad-main); color: #fff; }
+
+/* ---------- Institutions using PVL — the logo wall ---------- */
+/* One strip, one height, logos in their own colour on white, as the guide asks.
+   Built from the member list so it cannot drift from the network directory. */
+.logo-wall-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 18px; }
+.logo-wall-head h2 {
+  font-family: Inter, sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .17em; text-transform: uppercase; color: var(--blue);
+}
+.logo-wall-head p { margin: 0; font-size: 13px; color: var(--muted); }
+.logo-wall {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 20px 38px; padding: 26px 28px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
+}
+.logo-wall img {
+  height: 38px; width: auto; max-width: 128px;
+  object-fit: contain; display: block;
+  opacity: .88; transition: opacity .2s var(--ease);
+}
+.logo-wall img:hover { opacity: 1; }
+@media (max-width: 640px) {
+  .logo-wall { gap: 16px 24px; padding: 20px; }
+  .logo-wall img { height: 30px; max-width: 96px; }
+}
